@@ -1,0 +1,40 @@
+import React from 'react'
+import axios from 'axios'
+import { useState, useNavigate } from 'react'
+import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
+
+const login = () => {
+
+const [ email, setEmail] = useState("");
+const [password, setPassword] = useState("");
+
+const handleSubmit = async (e) =>{
+    e.preventDefault();
+    try{
+        const res = await axios("http://localhost:5000/api/login", {email, password});
+        if(res.data.status === 1){
+            localStorage.setItem("token", res.data.token);
+            localStorage.setItem("user", json.stringify(res.data.user));
+            toast.success("Logged in successfully");
+            navigate("/");
+        }
+    }catch(err){
+        toast.error(err.response?.data?.message || "Login error");
+    }
+};
+    return(
+        <div>
+            <div>
+                <form onSubmit={handleSubmit}>
+                    <input type="email" placeholder="Write email" value={email} onChnage={(e) =>{setEmail(e.target.value)}} required />
+                    <input type="password" placeholder="Write password" value={password} onChnage={(e) =>{setPaassword(e.target.value)}} required/>
+                    <button type="submit">Login</button>
+                    <p>Create an account<link to="/register">Register</link></p>
+                </form>
+            </div>
+        </div>
+    )
+};
+
+export default login;
