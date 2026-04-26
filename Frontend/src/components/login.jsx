@@ -4,7 +4,7 @@ import { useState, useNavigate } from 'react'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
 
-const login = () => {
+const Login = () => {
 
 const [ email, setEmail] = useState("");
 const [password, setPassword] = useState("");
@@ -17,7 +17,6 @@ const handleSubmit = async (e) =>{
             localStorage.setItem("token", res.data.token);
             localStorage.setItem("user", json.stringify(res.data.user));
             toast.success("Logged in successfully");
-            navigate("/");
         }
     }catch(err){
         toast.error(err.response?.data?.message || "Login error");
@@ -27,14 +26,14 @@ const handleSubmit = async (e) =>{
         <div>
             <div>
                 <form onSubmit={handleSubmit}>
-                    <input type="email" placeholder="Write email" value={email} onChnage={(e) =>{setEmail(e.target.value)}} required />
-                    <input type="password" placeholder="Write password" value={password} onChnage={(e) =>{setPaassword(e.target.value)}} required/>
+                    <input type="email" placeholder="Write email" value={email} onChange={(e) =>{setEmail(e.target.value)}} required />
+                    <input type="password" placeholder="Write password" value={password} onChange={(e) =>{setPaassword(e.target.value)}} required/>
                     <button type="submit">Login</button>
-                    <p>Create an account<link to="/register">Register</link></p>
+                    <p>Create an account<Link to="/register">Register</Link></p>
                 </form>
             </div>
         </div>
     )
 };
 
-export default login;
+export default Login;
