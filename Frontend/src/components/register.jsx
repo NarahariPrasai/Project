@@ -2,13 +2,13 @@
 import axios from 'axios'
 import {Link, useNavigate} from 'react-router-dom'
 import {useState, React} from 'react' 
-import toast from 'react-toastify'
+import {toast}from 'react-toastify'
 
-const register = () => {
+const Register = () => {
 const [username, setUsername] = useState("");
-const [email, setUsername] = useState("");
-const [phone, setUsername] = useState("");
-const [password, setUsername] = useState("");
+const [email, setEmail] = useState("");
+const [phone, setPhone] = useState("");
+const [password, setPassword] = useState("");
 
 const handleRegister = async(e) => {
     e.preventDefault();
@@ -36,4 +36,4 @@ return(
     </div>
 )};
 
-export default register;
+export default Register;

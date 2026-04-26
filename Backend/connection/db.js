@@ -1,10 +1,10 @@
 import mysql from "mysql2";
 
 const db = mysql.createConnection({
-    host:"localhostt",
+    host:"localhost",
     user: "root",
     password: "n15ch4l111",
-    database: "bookstore"
+    database: "onlinebookstore"
 });
 
 db.connect((err) => {
