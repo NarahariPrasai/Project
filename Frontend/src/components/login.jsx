@@ -1,10 +1,12 @@
 import React from 'react'
 import axios from 'axios'
-import { useState, useNavigate } from 'react'
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { Link, useNavigate} from 'react-router-dom'
 import { toast } from 'react-toastify'
 
 const Login = () => {
+
+const navigate = useNavigate();
 
 const [ email, setEmail] = useState("");
 const [password, setPassword] = useState("");
@@ -17,6 +19,7 @@ const handleSubmit = async (e) =>{
             localStorage.setItem("token", res.data.token);
             localStorage.setItem("user", json.stringify(res.data.user));
             toast.success("Logged in successfully");
+            navigate("/");
         }
     }catch(err){
         toast.error(err.response?.data?.message || "Login error");

@@ -21,8 +21,8 @@ export const register =(req, res) =>{
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash( password, salt);
 
-        const q = "INSERT INTO user( username, emil, phone, password ) VALUES (?, ?, ?, ?)";
-        db.query( q, [username, email, phone, hashedpassword ], (err) =>{
+        const q = "INSERT INTO user( Username, Phone, Password, Email ) VALUES (?, ?, ?, ?)";
+        db.query( q, [username, phone, hashedPassword, email], (err) =>{
             if( err )
                 return res.status(500).json({message: "Error creating user" , error: err});
             return res.status(201).json({message: "Successfully registered", status: 1});
