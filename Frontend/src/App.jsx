@@ -7,6 +7,11 @@ import Search from './Components/Search'
 import Wishlist from './Components/Wishlist'
 import Cart from './Components/Cart'
 import Home from './Components/Home'
+import Navbar from './Components/Navbar'
+import Orders from './Components/Orders'
+import Contact from './Components/Contact'
+import Collection from './Components/Collection.jsx'
+
 
 const router = createBrowserRouter([
   {
@@ -31,6 +36,22 @@ const router = createBrowserRouter([
     <div>
       <Navbar/>
       <Orders/>
+    </div>
+  },
+    {
+    path: "/contact",
+    element:     
+    <div>
+      <Navbar/>
+      <Contact/>
+    </div>
+  },
+    {
+    path: "/collection",
+    element:     
+    <div>
+      <Navbar/>
+      <Collection/>
     </div>
   },
   {
@@ -59,7 +80,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <Navbar/>
+    element: <Login/>
   },
   {
     path: "/register",
@@ -70,7 +91,9 @@ const router = createBrowserRouter([
 
 const App = () => {
   return(
-    <RouterProvider router={Router} />
+    <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
+    <RouterProvider router = {router} />
+    </div>
   )
 };
 

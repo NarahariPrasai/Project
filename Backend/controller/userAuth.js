@@ -31,7 +31,7 @@ export const register =(req, res) =>{
 };
 
 export const login = (req, res) => {
-    const [email, password ] = req.body;
+    const { email, password } = req.body;
 
     const query = "SELECT * FROM user WHERE email = ?"
     db.query(query, [email], async(err, data) =>{
