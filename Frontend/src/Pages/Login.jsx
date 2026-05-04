@@ -17,7 +17,7 @@ const handleSubmit = async (e) =>{
         const res = await axios.post("http://localhost:5000/api/login", {email, password});
         if(res.data.status === 1){
             localStorage.setItem("token", res.data.token);
-            localStorage.setItem("user", json.stringify(res.data.user));
+            localStorage.setItem("user", JSON.stringify(res.data.user));
             toast.success("Logged in successfully");
             navigate("/");
         }

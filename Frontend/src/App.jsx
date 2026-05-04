@@ -1,16 +1,15 @@
 import React from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Login from './Components/Login'
-import Register from './Components/Register'
-import About from './Components/About'
-import Search from './Components/Search'
-import Wishlist from './Components/Wishlist'
-import Cart from './Components/Cart'
-import Home from './Components/Home'
+import Login from './Pages/Login.jsx'
+import Register from './Pages/Register.jsx'
+import About from './Pages/About.jsx'
+import Wishlist from './Pages/Wishlist.jsx'
+import Cart from './Pages/Cart.jsx'
+import Home from './Pages/Home.jsx'
 import Navbar from './Components/Navbar'
-import Orders from './Components/Orders'
-import Contact from './Components/Contact'
-import Collection from './Components/Collection.jsx'
+import Orders from './Pages/Orders.jsx'
+import Contact from './Pages/Contact.jsx'
+import Collection from './Pages/Collection.jsx'
 
 
 const router = createBrowserRouter([
@@ -52,14 +51,6 @@ const router = createBrowserRouter([
     <div>
       <Navbar/>
       <Collection/>
-    </div>
-  },
-  {
-    path: "/search",
-    element:     
-    <div>
-      <Navbar/>
-      <Search/>
     </div>
   },
   {
