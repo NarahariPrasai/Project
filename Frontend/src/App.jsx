@@ -12,6 +12,7 @@ import Home from './Pages/Home.jsx'
 import Orders from './Pages/Orders.jsx'
 import Contact from './Pages/Contact.jsx'
 import Collection from './Pages/Collection.jsx'
+import Product from './Pages/Product.jsx'
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/about", element: <About /> },
       { path: "/myorders", element: <Orders /> },
+      { path: "/product/:productId", element: <Product/> },
       { path: "/contact", element: <Contact /> },
       { path: "/collection", element: <Collection /> },
       { path: "/wishlist", element: <Wishlist /> },
@@ -34,7 +36,7 @@ const router = createBrowserRouter([
 const App = () => {
   return(
   <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
-  <RouterProvider router={router} />;
+  <RouterProvider router={router} />
   </div>
   )
 };

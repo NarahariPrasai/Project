@@ -8,7 +8,7 @@ const Footer = () => {
             <div>
                 <img src={assets.logo} className='mb-5 w-32' alt=""/>
                 <p className='w-full md:w-2/3 text-gray-600'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet qui maiores aliquid excepturi tenetur voluptatum adipisci nihil consectetur nam impedit?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet qui maiores aliquid excepturi tenetur voluptatum adipisci nihil consectetur nam impedit?   
                 </p>
             </div>
 
@@ -35,7 +35,6 @@ const Footer = () => {
             <hr />
             <p className='py-5 text-sm text-center'>Copyright 2024@ readerszone.com - All Rights Reserved.</p>
         </div>
-
     </div>
   )
 }

@@ -14,6 +14,7 @@ import Reading2 from './Reading2.jpg'
 import shipping from './shipping.jpg';
 import security from './security.png';
 import support from './support.png';
+import cross from './cross.png'
 
 
 export const assets = {
@@ -26,7 +27,8 @@ export const assets = {
     Reading2,
     shipping,
     security,
-    support
+    support,
+    cross
 }
 
 export const products = [
@@ -39,7 +41,10 @@ export const products = [
         AUTHOR: "F.Scott Fitzgerald",
         POSTER: [Book1],
         PRICE: 700,
-        Bestseller: true 
+        Bestseller: true ,
+        Published_date: "12345",
+        Rating: 4,
+        Genres: "fiction"
     },
     {
         Book_id : 2,
@@ -50,7 +55,10 @@ export const products = [
         AUTHOR: "Sarah J. Maas",
         POSTER: [Book2],
         PRICE: 750,
-        Bestseller: true 
+        Bestseller: true ,
+        Published_date: "12345",
+        Rating: 4,
+        Genres: "non-fiction"
     },
     {
         Book_id : 3,
@@ -61,7 +69,10 @@ export const products = [
         AUTHOR: "Miguel de Cervantes",
         POSTER: [Book3],
         PRICE: 800,
-        Bestseller: true 
+        Bestseller: true,
+        Published_date: "12345",
+        Rating: 4,
+        Genres: "romance"
     },
     {
         Book_id : 4,
@@ -72,7 +83,10 @@ export const products = [
         AUTHOR: "George Orwell",
         POSTER: [Book4],
         PRICE: 550,
-        Bestseller: true 
+        Bestseller: true,
+        Published_date: "12345",
+        Rating: 4,
+        Genres: "mystery"
     },
     {
         Book_id : 5,
@@ -83,7 +97,10 @@ export const products = [
         AUTHOR: "Margaret Mitchell",
         POSTER: [Book5],
         PRICE: 650,
-        Bestseller: true 
+        Bestseller: true,
+        Published_date: "12345",
+        Rating: 4,
+        Genres: "sci-fi"
     },
     {
         Book_id : 6,
@@ -93,6 +110,10 @@ export const products = [
         STOCK: 200,
         AUTHOR: "Leo Tolstoy",
         POSTER: [Book6],
-        PRICE: 800
+        PRICE: 800,
+        Published_date: "12345",
+        Rating: 4,
+        Genres: "sci-fi"
     },
 ]
+
