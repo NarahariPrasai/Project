@@ -11,6 +11,10 @@ import Book4 from './Book4.jpeg'
 import Book5 from './Book5.jpg'
 import Book6 from './Book6.jpg';
 import Reading2 from './Reading2.jpg'
+import shipping from './shipping.jpg';
+import security from './security.png';
+import support from './support.png';
+
 
 export const assets = {
     logo,
@@ -19,7 +23,10 @@ export const assets = {
     cart,
     dropdown,
     menu,
-    Reading2
+    Reading2,
+    shipping,
+    security,
+    support
 }
 
 export const products = [
@@ -31,7 +38,8 @@ export const products = [
         STOCK: 100,
         AUTHOR: "F.Scott Fitzgerald",
         POSTER: [Book1],
-        PRICE: 700
+        PRICE: 700,
+        Bestseller: true 
     },
     {
         Book_id : 2,
@@ -41,7 +49,8 @@ export const products = [
         STOCK: 105,
         AUTHOR: "Sarah J. Maas",
         POSTER: [Book2],
-        PRICE: 750
+        PRICE: 750,
+        Bestseller: true 
     },
     {
         Book_id : 3,
@@ -51,7 +60,8 @@ export const products = [
         STOCK: 150,
         AUTHOR: "Miguel de Cervantes",
         POSTER: [Book3],
-        PRICE: 800
+        PRICE: 800,
+        Bestseller: true 
     },
     {
         Book_id : 4,
@@ -61,7 +71,8 @@ export const products = [
         STOCK: 160,
         AUTHOR: "George Orwell",
         POSTER: [Book4],
-        PRICE: 550
+        PRICE: 550,
+        Bestseller: true 
     },
     {
         Book_id : 5,
@@ -71,7 +82,8 @@ export const products = [
         STOCK: 135,
         AUTHOR: "Margaret Mitchell",
         POSTER: [Book5],
-        PRICE: 650
+        PRICE: 650,
+        Bestseller: true 
     },
     {
         Book_id : 6,
