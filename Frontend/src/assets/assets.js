@@ -14,7 +14,9 @@ import Reading2 from './Reading2.jpg'
 import shipping from './shipping.jpg';
 import security from './security.png';
 import support from './support.png';
-import cross from './cross.png'
+import cross from './cross.png';
+import dullstar from './dullstar.png';
+import staricon from './staricon.png';
 
 
 export const assets = {
@@ -28,7 +30,9 @@ export const assets = {
     shipping,
     security,
     support,
-    cross
+    cross,
+    dullstar,
+    staricon
 }
 
 export const products = [
