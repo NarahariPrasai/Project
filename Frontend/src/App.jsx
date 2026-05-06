@@ -1,8 +1,6 @@
 import React from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-
 import Layout from './Layout'
-
 import Login from './Pages/Login.jsx'
 import Register from './Pages/Register.jsx'
 import About from './Pages/About.jsx'
@@ -13,13 +11,20 @@ import Orders from './Pages/Orders.jsx'
 import Contact from './Pages/Contact.jsx'
 import Collection from './Pages/Collection.jsx'
 import Product from './Pages/Product.jsx'
+import PlaceOrder from './Pages/PlaceOrder.jsx'
+import ShopContextProvider from './Context/ShopContext.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: (
+      <ShopContextProvider>
+        <Layout />
+      </ShopContextProvider>
+    ),
     children: [
       { path: "/", element: <Home /> },
+      { path: "/place-order", element: <PlaceOrder /> },
       { path: "/about", element: <About /> },
       { path: "/myorders", element: <Orders /> },
       { path: "/product/:productId", element: <Product/> },
