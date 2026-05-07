@@ -19,6 +19,7 @@ import dullstar from './dullstar.png';
 import staricon from './staricon.png';
 import binicon from './binicon.png'
 import esewa_logo from './esewa_logo.jpg'
+import aboutuslogo from './aboutuslogo.jpg'
 
 export const assets = {
     logo,
@@ -35,7 +36,8 @@ export const assets = {
     dullstar,
     staricon,
     binicon,
-    esewa_logo
+    esewa_logo,
+    aboutuslogo
 }
 
 export const products = [

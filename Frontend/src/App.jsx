@@ -32,10 +32,10 @@ const router = createBrowserRouter([
       { path: "/collection", element: <Collection /> },
       { path: "/wishlist", element: <Wishlist /> },
       { path: "/cart", element: <Cart /> },
+      { path: "/login", element: <Login /> },
+      { path: "/register", element: <Register /> },
     ]
-  },
-  { path: "/login", element: <Login /> },
-  { path: "/register", element: <Register /> }
+  }
 ]);
 
 const App = () => {
